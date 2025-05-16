@@ -5,7 +5,7 @@ Repositório para a colaboração em equipe para o desenvolvimento e finalizaç�
 - **Criação e Edição de Partidas**: Permite que usuários criem e editem jogos com detalhes como data, horário, local e infraestrutura associados.
 - **Gestão de Ingressos**: Geração manual de ingressos após confirmação de pagamento, com QR codes para validação.
 - **Integração com Stripe**: Simulação do processamento de pagamentos com validação de PaymentIntents no ambiente SandBox.
-- **Dashboard Personalizado**: Interface para visualizar eventos criados, inscritos, históricos e ingressos gerados.
+- **Dashboard Personalizado**: Interface para visualizar partidas criadas, inscritos, históricos e ingressos gerados.
 - **Controle de Acesso**: Restrição de acesso a usuários autenticados.
 
 ## Tecnologias Utilizadas
