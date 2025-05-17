@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* Pagina de exibição de jogos */
+#image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    max-width: 100%; 
+}
+
+#image-container img {
+    max-width: 100%; 
+    max-height: 400px;
+    object-fit: cover; 
+    border-radius: 10px; 
+    border: 2px solid #cccccc; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#info-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container h3,
+#description-container h3 {
+    font-size: 20px;
+    font-weight: bold ;
+}
+
+#info-container ion-icon {
+    font-size: 20px;
+    color: #F2A340;
+    margin-right: 5px;
+}
+
+#info-container #event-submit {
+    margin: 20px 0;
+}
+
+#items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li {
+    display: flex;
+}
+
+#description-container {
+    margin-top: 30px;
+}
+
+.event-confirm-msg{
+    background-color: rgb(144, 192, 223);
+    padding: 5px;
+    width:300px;
+    border: 1px solid black;
+}
+.event-full-msg{
+    background-color: rgb(230, 106, 60);
+    padding: 5px;
+    width:300px;
+    border: 1px solid black;
+}
+
+.event-expired-msg {
+    color: red;
+    font-weight: bold;
+    background-color: aliceblue;
+    padding: 5px;
+    width:300px;
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.payment-container {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.payment-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.payment-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.payment-container label {
+    font-weight: bold;
+}
+
+.payment-container input {
+    font-size: 14px;
+}
+
+.msg.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.StripeElement {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+ }
