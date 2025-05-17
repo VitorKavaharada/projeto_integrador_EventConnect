@@ -1,3 +1,20 @@
+# projeto_integrador_EventConnect
+Repositório para a colaboração em equipe para o desenvolvimento e finalização do projeto do semestre.
+
+## Funcionalidades
+- **Criação e Edição de Partidas**: Permite que usuários criem e editem jogos com detalhes como data, horário, local e infraestrutura associados.
+- **Gestão de Ingressos**: Geração manual de ingressos após confirmação de pagamento, com QR codes para validação.
+- **Integração com Stripe**: Simulação do processamento de pagamentos com validação de PaymentIntents no ambiente SandBox.
+- **Dashboard Personalizado**: Interface para visualizar partidas criadas, inscritos, históricos e ingressos gerados.
+- **Controle de Acesso**: Restrição de acesso a usuários autenticados.
+
+## Tecnologias Utilizadas
+- **Backend**: PHP com Laravel
+- **Pagamentos**: Stripe API para simular transações seguras.
+- **Frontend**: HTML, CSS e JavaScript, com integração de bibliotecas como QRCode.js.
+- **Banco de dados**: MySql (gerenciado via PHPMyAdmin)
+- **Outros**: Biblioteca Carbon para manipulação de datas.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
