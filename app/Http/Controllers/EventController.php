@@ -52,7 +52,6 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $event = new Event;
-
         $event->headline = $request->headline;
         $event->date_event = $request->date_event;
         $event->price = $request->price ?? 0.00;
@@ -61,8 +60,12 @@ class EventController extends Controller
         $event->participant_limit = $request->participant_limit;
 
         if ($request->hasFile('picture') && $request->file('picture')->isValid()) {
+            $picturePath = public_path('img/events');
+            if (!file_exists($picturePath)) {
+                mkdir($picturePath, 0755, true);
+            }
             $pictureName = md5($request->picture->getClientOriginalName() . strtotime("now")) . "." . $request->picture->extension();
-            $request->picture->move(public_path('img/events'), $pictureName);
+            $request->picture->move($picturePath, $pictureName);
             $event->picture = $pictureName;
         }
 
