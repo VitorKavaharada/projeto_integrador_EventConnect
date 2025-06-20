@@ -39,7 +39,7 @@
 
     <div class="button-container">
         <button onclick="window.print()" class="btn btn-outline-secondary btn-lg">Imprimir Ingresso</button>
-        <a href="{{ route('dashboard') }}" class="btn btn-outline-primary btn-lg">Voltar ao Dashboard</a>
+        <a href="{{ route('dashboard.user-events') }}" class="btn btn-outline-primary btn-lg">Voltar ao Dashboard</a>
     </div>
 </div>
 

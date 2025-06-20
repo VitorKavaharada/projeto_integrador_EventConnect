@@ -98,11 +98,11 @@ class EventController extends Controller
         $event = Event::findOrFail($id);
 
         if (Auth::user()->id != $event->user->id) {
-            return redirect('/dashboard')->with('error', 'Você não tem permissão para editar este evento.');
+            return redirect()->route('dashboard.created-events')->with('error', 'Você não tem permissão para editar este evento.');
         }
 
         if ($event->is_expired) {
-            return redirect('/dashboard')->with('error', 'Este evento já expirou e não pode ser editado.');
+            return redirect()->route('dashboard.created-events')->with('error', 'Este evento já expirou e não pode ser editado.');
         }
 
         $availableProducts = Product::all();
@@ -120,11 +120,11 @@ class EventController extends Controller
         $event = Event::findOrFail($request->id);
 
         if (Auth::user()->id != $event->user->id) {
-            return redirect('/dashboard')->with('error', 'Você não tem permissão para editar este evento.');
+            return redirect()->route('dashboard.created-events')->with('error', 'Você não tem permissão para editar este evento.');
         }
 
         if ($event->is_expired) {
-            return redirect('/dashboard')->with('error', 'Este evento já expirou e não pode ser editado.');
+            return redirect()->route('dashboard.created-events')->with('error', 'Este evento já expirou e não pode ser editado.');
         }
 
         $event->update($request->only(['headline', 'date_event', 'time_event', 'price', 'details', 'participant_limit']));
@@ -145,7 +145,7 @@ class EventController extends Controller
             }
         }
 
-        return redirect('/dashboard')->with('msg', 'Evento editado com sucesso!');
+        return redirect()->route('dashboard.created-events')->with('msg', 'Evento editado com sucesso!');
     }
 
     public function destroy($id)
@@ -153,7 +153,7 @@ class EventController extends Controller
         $event = Event::find($id);
 
         if (!$event) {
-            return redirect('/dashboard')->with('error', 'Evento não encontrado.');
+            return redirect()->route('dashboard.created-events')->with('error', 'Evento não encontrado.');
         }
 
         if ($event->picture) {
@@ -167,6 +167,6 @@ class EventController extends Controller
         $event->products()->delete();
         $event->delete();
 
-        return redirect('/dashboard')->with('msg', 'Evento e seus dados associados excluídos com sucesso!');
+        return redirect()->route('dashboard.created-events')->with('msg', 'Evento e seus dados associados excluídos com sucesso!');
     }
 }

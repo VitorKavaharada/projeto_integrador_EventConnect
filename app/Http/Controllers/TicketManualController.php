@@ -79,6 +79,6 @@ class TicketManualController extends Controller
         'transaction_id' => 'pi_' . $eventId . '_' . time(),
     ]);
 
-    return redirect()->route('dashboard')->with('msg', 'Ingresso gerado com sucesso!');
+    return redirect()->route('dashboard.user-events')->with('msg', 'Ingresso gerado com sucesso!');
 }
 }

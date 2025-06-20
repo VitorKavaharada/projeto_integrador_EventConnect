@@ -19,6 +19,8 @@ Route::delete('/evento/{id}', [EventController::class, 'destroy'])->middleware('
 Route::get('/evento/{id}', [EventDetailController::class, 'show'])->name('event.show');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard/eventos-usuario', [DashboardController::class, 'userEvents'])->name('dashboard.user-events')->middleware('auth');
+Route::get('/dashboard/eventos-criados', [DashboardController::class, 'createdEvents'])->name('dashboard.created-events')->middleware('auth');
 
 Route::post('evento/presenca/{id}', [RegistrationController::class, 'joinEventConfirm'])->name('event.join')->middleware('auth');
 Route::delete('evento/cancelar/{id}', [RegistrationController::class, 'cancelRegistration'])->middleware('auth');

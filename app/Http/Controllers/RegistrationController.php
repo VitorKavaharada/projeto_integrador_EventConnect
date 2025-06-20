@@ -58,8 +58,8 @@ class RegistrationController extends Controller
             'qr_code' => $ticketNumber,
         ]);
 
-        return redirect('/dashboard')->with('msg', 'Presença confirmada no evento: ' . $event->headline . '. Ingresso gerado com sucesso!');
-    }
+        return redirect()->route('dashboard.user-events')->with('msg', 'Presença confirmada no evento: ' . $event->headline . '. Ingresso gerado com sucesso!');
+    } 
 
     public function cancelRegistration($id)
     {
@@ -70,6 +70,6 @@ class RegistrationController extends Controller
 
         $event = Event::findOrFail($id);
 
-        return redirect('/dashboard')->with('msg', 'Inscrição cancelada com sucesso: ' . $event->headline);
+        return redirect()->route('dashboard.user-events')->with('msg', 'Inscrição cancelada com sucesso: ' . $event->headline);
     }
 }

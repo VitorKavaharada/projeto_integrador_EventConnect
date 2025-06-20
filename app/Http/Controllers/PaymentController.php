@@ -88,7 +88,7 @@ class PaymentController extends Controller
 
                 $user->participatedEvents()->attach($event->id);
 
-                return redirect()->route('dashboard')->with('msg', 'Pagamento aprovado! Ingresso gerado para: ' . $event->headline);
+                return redirect()->route('dashboard.user-events')->with('msg', 'Pagamento aprovado! Ingresso gerado para: ' . $event->headline);
             } elseif ($paymentMethod === 'boleto') {
                 $request->validate([
                     'street' => 'required',

@@ -19,7 +19,7 @@
                     <button type="submit" class="btn btn-primary">Gerar Ingresso</button>
                 </form>
 
-                <a href="{{ route('dashboard') }}" class="btn btn-secondary mt-3">Voltar ao Dashboard</a>
+                <a href="{{ route('dashboard.user-events') }}" class="btn btn-secondary mt-3">Voltar ao Dashboard</a>
             </div>
         </div>
     </div>
