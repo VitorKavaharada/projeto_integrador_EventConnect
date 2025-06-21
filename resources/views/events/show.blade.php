@@ -7,89 +7,99 @@
     <link rel="stylesheet" href="{{ asset('css/show.css') }}">
 @endpush
 
-<div class="col-md-10 offset-md-1">
-    <div class="row">
-        <div id="image-container" class="col-md-6">
-            <img src="{{ asset('img/events/' . $event->picture) }}" class="img-fluid" alt="{{ $event->headline }}">
+<div class="container my-5">
+    <div class="row g-4">
+        <div id="image-container" class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img src="{{ asset('img/events/' . $event->picture) }}" class="img-fluid rounded shadow" alt="{{ $event->headline }}">
         </div>
-        <div id="info-container" class="col-md-6">
-            <h1>{{ $event->headline }}</h1>
-            <p class="event-town">
+        <div id="info-container" class="col-12 col-md-6">
+            <h1 class="mb-3">{{ $event->headline }}</h1>
+            <p class="event-town mb-2">
                 <ion-icon name="navigate-outline"></ion-icon>
                 @if($event->address)
                     {{ $event->address->street }}, {{ $event->address->addressNumber }} - 
                     {{ $event->address->neighborhood }}, {{ $event->address->municipality }} - {{ $event->address->state }}
                 @endif
             </p>
-            <p> 
+            <p class="mb-2"> 
                 <ion-icon name="time-outline"></ion-icon>
                 {{ $event->time_event ? date('H:i', strtotime($event->time_event)) : 'Horário não definido' }}
             </p>
-            <p>
+            <p class="mb-2">
                 <ion-icon name="people-outline"></ion-icon>
                 Participantes: {{ count($event->users) }} / {{ $event->participant_limit ?? 'Sem limite' }}
             </p>
-            <p>
+            <p class="mb-2">
                 <ion-icon name="cash-outline"></ion-icon>
                 Preço: {{ $event->price == 0 ? 'Gratuito' : 'R$ ' . number_format($event->price, 2, ',', '.') }}
             </p>
-            <p class="event-owner">
+            <p class="event-owner mb-4">
                 <ion-icon name="man-outline"></ion-icon>
                 {{ $eventOrganizer['name'] }}
             </p>
             @if($event->is_expired)
-                <p class="event-expired-msg text-danger">Esta partida já expirou e não aceita novas inscrições.</p>
+                <div class="alert alert-danger event-expired-msg" role="alert">
+                    Esta partida já expirou e não aceita novas inscrições.
+                </div>
             @elseif($event->participant_limit && count($event->users) >= $event->participant_limit)
-                <p class="event-full-msg">Esta partida já atingiu a capacidade máxima de participantes.</p>
+                <div class="alert alert-warning event-full-msg" role="alert">
+                    Esta partida já atingiu a capacidade máxima de participantes.
+                </div>
             @elseif(!$isUserRegistered)
                 <form action="/evento/presenca/{{$event->id}}" method="POST">
                     @csrf
-                    <a href="/evento/presenca/{{$event->id}}"  
-                       class="btn btn-primary" 
-                       id="event-submit"
-                       onclick="event.preventDefault(); this.closest('form').submit();">
+                    <button type="submit" class="btn btn-primary btn-lg event-submit">
                         {{ $event->price == 0 ? 'Confirmar presença' : 'Pagar ingresso' }}
-                    </a>
+                    </button>
                 </form>
             @else
-                <p class="event-confirm-msg">Você já se inscreveu nessa partida</p>
+                <div class="alert alert-success event-confirm-msg" role="alert">
+                    Você já se inscreveu nessa partida!
+                </div>
             @endif
 
-            <div class="event-products">
-                <h3>O local conta com:</h3>
-                <ul>
+            <div class="event-products mt-4">
+                <h3 class="mb-3">O local conta com:</h3>
+                <ul class="list-unstyled">
                     @foreach($event->products as $product)
-                        <li>{{ $product->product_name }}</li>
+                        <li class="d-flex align-items-center mb-2">
+                            <ion-icon name="checkmark-circle-outline" class="me-2"></ion-icon>
+                            {{ $product->product_name }}
+                        </li>
                     @endforeach
                     @if($event->custom_product)
-                        <li>{{ $event->custom_product }}</li>
+                        <li class="d-flex align-items-center mb-2">
+                            <ion-icon name="checkmark-circle-outline" class="me-2"></ion-icon>
+                            {{ $event->custom_product }}
+                        </li>
                     @endif
                 </ul>
             </div>
         </div>
 
-        <div class="col-md-12" id="description-container">
-            <h3>Sobre a partida:</h3>
+        <div class="col-12" id="description-container">
+            <h3 class="mb-3">Sobre a partida:</h3>
             <p class="event-description">{{ $event->details }}</p>
         </div>
     </div>
-</div>
-<div class="event-participants">
-    <h3>Lista de Participantes:</h3>
-    @php
-        $confirmedParticipants = $event->users->filter(function($user) use ($event) {
-            return $event->tickets()->where('user_id', $user->id)->exists();
-        });
-    @endphp
-    @if(count($confirmedParticipants) > 0)
-        <ul>
-            @foreach($confirmedParticipants as $participant)
-                <li>{{ $participant->name }}</li>
-            @endforeach
-        </ul>
-    @else
-        <p>Nenhum participante confirmado até agora.</p>
-    @endif
+
+    <div class="event-participants mt-5">
+        <h3 class="mb-3">Lista de Participantes:</h3>
+        @php
+            $confirmedParticipants = $event->users->filter(function($user) use ($event) {
+                return $event->tickets()->where('user_id', $user->id)->exists();
+            });
+        @endphp
+        @if(count($confirmedParticipants) > 0)
+            <ul class="list-unstyled d-flex flex-wrap gap-3">
+                @foreach($confirmedParticipants as $participant)
+                    <li class="bg-light p-2 rounded">{{ $participant->name }}</li>
+                @endforeach
+            </ul>
+        @else
+            <p class="text-muted">Nenhum participante confirmado até agora.</p>
+        @endif
+    </div>
 </div>
 
 @endsection
