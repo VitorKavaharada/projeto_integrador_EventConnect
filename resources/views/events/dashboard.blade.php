@@ -34,7 +34,7 @@
                     </a>
                     <a href="{{ route('dashboard.created-events') }}" class="menu-item">
                         <h2>Jogos Criados</h2>
-                        <p>Gerencie os jogos que você criou e pagamentos pendentes.</p>
+                        <p>Gerencie os jogos que você criou.</p>
                     </a>
                 </div>
             </div>

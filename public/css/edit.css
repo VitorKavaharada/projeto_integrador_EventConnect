@@ -16,6 +16,10 @@
 }
 
 .img-preview {
-    margin-left: 180px;  
-    border: 1px solid black;  /*Remover depois */
+    width: 400px;
+    height: 200px;
+     display: block; 
+     margin: auto;
+     margin-top: 15px;
+     margin-bottom: 15px;
 }
