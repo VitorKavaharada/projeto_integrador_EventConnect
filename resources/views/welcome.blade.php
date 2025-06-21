@@ -8,36 +8,42 @@
         <!-- Fontes do Google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         
         <!-- CSS Bootstrap -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
         
-        <!-- CSS  -->
+        <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
-        <!-- js  -->
+        <!-- js -->
         <script src="{{ asset('js/scripts.js') }}" defer></script>
-
     </head>
     <body>
         <header>
-                {{-- Não esquecer do @csrf --}}
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <a href="/" class="navbar-brand">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                <div class="container-fluid px-4">
+                    <a href="/" class="navbar-brand order-lg-1">
                         <img class="logo" src="{{ asset('img/Logo_Teste.png') }}" alt="Logo">
                     </a>
-                    <form action="/" method="GET" class="d-flex ms-3" style="width: 500px;">
-                        <input type="text" name="research" class="form-control" placeholder="Pesquise por um jogo...">
-                        <button type="submit" class="btn btn-outline-primary ms-2"><ion-icon name="search-outline"></ion-icon></button>
-                    </form>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
+                    <div class="d-flex align-items-center flex-grow-1 ms-3 search-form order-lg-2">
+                        <form action="/" method="GET" class="w-100">
+                            @csrf
+                            <div class="input-group">
+                                <input type="text" name="research" class="form-control rounded-pill" placeholder="Pesquise por um jogo...">
+                                <button type="submit" class="btn btn-outline-primary ms-2 rounded-pill"><ion-icon name="search-outline"></ion-icon></button>
+                            </div>
+                        </form>
+                    </div>
+                    <button class="navbar-toggler order-lg-4 order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse order-lg-3 order-4" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-center">
                             <li class="nav-item">
-                                <a href="/" class="nav-link">Início </a>
+                                <a href="/" class="nav-link">Início</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/evento/criacao" class="nav-link">Criar Jogos</a>
@@ -47,7 +53,7 @@
                                 <a href="/dashboard" class="nav-link">Gerenciar Jogos</a>
                             </li>
                             <li class="nav-item">
-                                 <form action="/logout" method="POST" style="display:inline;">{{-- display inline temporario --}}
+                                <form action="/logout" method="POST" style="display:inline;">
                                     @csrf
                                     <a href="/logout" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
                                 </form>
