@@ -87,14 +87,15 @@ header form button {
 
 /* Carousel */
 .carousel {
-    max-height: 400px;
+    max-height: 600px;
     margin: 20px auto 0;
-    max-width: 1450px;
+    max-width: 1600px;
 }
 
 .carousel .carousel-inner {
     max-height: 400px;
 }
+
 
 .carousel .carousel-item img {
     max-height: 400px;

@@ -76,13 +76,13 @@
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{ asset('img/carousel/acao-jogador.jpg') }}" class="d-block w-100" alt="Slide 1">
+                                <img src="{{ asset('img/carousel/jogopes_hd.jpeg') }}" class="d-block w-100" alt="Slide 1">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('img/carousel/jogadores-profissional.jpg') }}" class="d-block w-100" alt="Slide 2">
+                                <img src="{{ asset('img/carousel/estadio.jpeg') }}" class="d-block w-100" alt="Slide 2">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('img/carousel/jogadores2.jpg') }}" class="d-block w-100" alt="Slide 3">
+                                <img src="{{ asset('img/carousel/estadio_2.png') }}" class="d-block w-100" alt="Slide 3">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
