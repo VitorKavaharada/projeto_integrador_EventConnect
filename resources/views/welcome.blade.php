@@ -33,7 +33,7 @@
                             @csrf
                             <div class="input-group">
                                 <input type="text" name="research" class="form-control rounded-pill" placeholder="Pesquise por um jogo...">
-                                <button type="submit" class="btn btn-outline-primary ms-2 rounded-pill"><ion-icon name="search-outline"></ion-icon></button>
+                                <button type="submit" class="btn btn-outline-primary ms-2 rounded-pill search-icon"><ion-icon name="search-outline"></ion-icon></button>
                             </div>
                         </form>
                     </div>
@@ -109,7 +109,7 @@
                         @endif
                         <div id="cards-container" class="row">
                             @foreach($events as $event)
-                                <div class="card col-md-3">
+                                <div class="card col-12 col-md-6 col-lg-3">
                                     <img src="{{ asset('img/events/' . $event->picture) }}" alt="{{ $event->headline }}">
                                     <div class="card-body">
                                         <p class="card-date">{{date('d/m/Y', strtotime($event->date_event))}}</p>

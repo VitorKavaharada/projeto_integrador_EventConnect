@@ -28,7 +28,7 @@ header .navbar-nav .nav-link:hover {
 }
 
 header .search-form {
-    max-width: 400px;
+    max-width: 800px;
 }
 
 header .search-form .input-group {
@@ -55,7 +55,7 @@ header .search-form button:hover {
     color: #fff;
 }
 
-/* Responsividade */
+/* Responsividade do Header */
 @media (max-width: 991.98px) {
     header .navbar-brand img {
         width: 140px;
@@ -64,6 +64,7 @@ header .search-form button:hover {
     header .search-form {
         max-width: 100%;
         margin: 10px 0;
+        margin-right: 15px;
     }
 
     header .navbar-nav {
@@ -101,54 +102,104 @@ header .search-form button:hover {
 
 /* Container */
 #events-container {
-    padding: 50px;
-}
-
-#events-container h2 {
-    margin-bottom: 10px;
-}
-
-#events-container .subtitle {
-    color: #757575;
-    margin-bottom: 30px;
+    padding: 50px 15px;
 }
 
 /* Cards */
 #cards-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #events-container .card {
-    flex: 1 0 21%;
-    max-width: 21%;
     border-radius: 10px;
     padding: 0;
-    margin: 10px;
+    margin: 15px;
     box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#events-container .card:hover {
+    transform: translateY(-5px);
 }
 
 #events-container img {
-    max-height: 150px;
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.card .card-body {
+    padding: 15px;
 }
 
 .card .card-date {
     font-size: 12px;
     color: #CCC;
+    margin-bottom: 5px;
 }
 
 .card .card-title {
     color: #212121;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .card .card-participants {
     font-size: 14px;
     color: #757575;
+    margin-bottom: 15px;
+}
+
+.card .btn-primary {
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsividade dos Cards */
+@media (max-width: 991.98px) {
+    #events-container .card {
+        margin: 10px;
+    }
+
+    #events-container img {
+        max-height: 160px;
+    }
+
+    .card .card-title {
+        font-size: 18px;
+    }
+
+    .card .card-participants {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #events-container .card {
+        margin: 10px 0;
+    }
+
+    #events-container img {
+        max-height: 140px;
+    }
+
+    .card .card-title {
+        font-size: 16px;
+    }
+
+    .card .card-participants {
+        font-size: 12px;
+    }
+
+    .card .card-date {
+        font-size: 11px;
+    }
 }
 
 /* Carousel */
@@ -168,4 +219,14 @@ header .search-form button:hover {
     object-fit: cover;
     display: block;
     margin: 0 auto;
+}
+
+/* Outros */
+#events-container h2 {
+    margin-bottom: 10px;
+}
+
+#events-container .subtitle {
+    color: #757575;
+    margin-bottom: 30px;
 }
