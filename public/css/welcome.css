@@ -1,6 +1,7 @@
+/* welcome.css */
 @charset "UTF-8";
 
-/* Container*/
+/* Container */
 #events-container {
     padding: 50px;
 }
@@ -21,12 +22,12 @@
 }
 
 #events-container .card {
-    flex: 1 0 21%; 
+    flex: 1 0 21%;
     max-width: 21%;
     border-radius: 10px;
     padding: 0;
-    margin: 10px; 
-    box-sizing: border-box; 
+    margin: 10px;
+    box-sizing: border-box;
 }
 
 #events-container img {
@@ -52,10 +53,10 @@
     color: #757575;
 }
 
-/*  Header */
+/* Header */
 header {
     background-color: #fff;
-    border-bottom: 1px solid #cccc;
+    border-bottom: 1px solid #ccc;
     padding: 10px 0;
 }
 
@@ -86,19 +87,19 @@ header form button {
 
 /* Carousel */
 .carousel {
-    max-height: 400px; 
-    margin: 20px auto 0; 
-    max-width: 1450px; 
+    max-height: 400px;
+    margin: 20px auto 0;
+    max-width: 1450px;
 }
 
 .carousel .carousel-inner {
-    max-height: 400px; 
+    max-height: 400px;
 }
 
 .carousel .carousel-item img {
-    max-height: 400px; 
+    max-height: 400px;
     width: 90%;
-    object-fit: cover; 
-    display: block; 
-    margin: 0 auto; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }

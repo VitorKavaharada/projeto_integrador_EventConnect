@@ -1,41 +1,119 @@
+/* main.css */
 @charset "UTF-8";
 
-/* Pagina geral que é extendida */
 * {
     font-family: 'Roboto';
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    padding-bottom: 100px;
-    position: relative;
+    margin: 0; /* Remove margens padrão */
 }
 
 header {
     background-color: #fff;
-    border: 1px solid #cccc;
+    border-bottom: 1px solid #ccc; /* Ajustado para border-bottom */
 }
 
-footer {
-    text-align: center;
+main {
+    flex: 1; /* Faz o main ocupar o espaço disponível */
+}
+
+.footer {
     background-color: #353E48;
     color: #FFF;
-    padding: 30px;
-    position: absolute;
-    bottom: 0;
+    padding: 50px 0 20px;
     width: 100%;
 }
 
-footer p {
-    margin-bottom: 0;
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #F2A340;
 }
 
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #B0B0B0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #B0B0B0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #F2A340;
+}
+
+.footer-links ion-icon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #B0B0B0;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #F2A340;
+}
+
+.footer .input-group .form-control {
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #B0B0B0;
+    background-color: #2A3038;
+    color: #FFF;
+}
+
+.footer .input-group .btn-primary {
+    border-radius: 0 20px 20px 0;
+    padding: 8px 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #4A535F;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #B0B0B0;
+    margin: 0;
+}
+
+/* Ajustes gerais */
 .row {
-    margin: 0px;
+    margin: 0;
 }
 
 .container-fluid {
-    padding: 0px;
+    padding: 0;
 }
 
 a, .btn, .btn-primary {
