@@ -18,10 +18,11 @@
 
                 @if (session('error'))
                     <div class="alert alert-danger">
-                        {{ session('error') }}
+                        {!! session('error') !!} <!-- Alterado para renderizar HTML -->
                     </div>
                 @endif
 
+                {{-- Resto do código permanece inalterado --}}
                 {{-- Jogos Inscritos --}}
                 <div class="col-md-10 offset-md-1 dashboard-title-container">
                     <h1>Jogos Inscritos</h1>
@@ -156,7 +157,7 @@
                             </div>
                         @endforeach
                     </div>
-                @endif
+  @endif
             </div>
         </div>
     </div>

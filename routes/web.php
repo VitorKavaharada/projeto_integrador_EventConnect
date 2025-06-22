@@ -24,16 +24,13 @@ Route::get('/dashboard/eventos-criados', [DashboardController::class, 'createdEv
 
 Route::post('evento/presenca/{id}', [RegistrationController::class, 'joinEventConfirm'])->name('event.join')->middleware('auth');
 Route::delete('evento/cancelar/{id}', [RegistrationController::class, 'cancelRegistration'])->middleware('auth');
+Route::get('evento/estorno/{id}', [RegistrationController::class, 'showRefundRequestForm'])->name('refund.request')->middleware('auth');
+Route::post('evento/estorno/{id}', [RegistrationController::class, 'submitRefundRequest'])->name('refund.submit')->middleware('auth');
 
 Route::get('/ticket/{id}', [TicketController::class, 'show'])->name('ticket.show')->middleware('auth');
 
 Route::get('/payment/{eventId}', [PaymentController::class, 'show'])->name('payment.show')->middleware('auth');
 Route::post('/payment/{eventId}', [PaymentController::class, 'process'])->name('payment.process')->middleware('auth');
 
-//  Formulário (GET)
 Route::get('/ticket/manual/{eventId}', [TicketManualController::class, 'showManualForm'])->name('ticket.manual.form')->middleware('auth');
-
-// ingresso (POST)
 Route::post('/ticket/manual/{eventId}', [TicketManualController::class, 'createManualTicket'])->name('ticket.manual')->middleware('auth');
-
-//Validar rotas depois

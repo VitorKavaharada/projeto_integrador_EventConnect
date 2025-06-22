@@ -149,24 +149,29 @@ class EventController extends Controller
     }
 
     public function destroy($id)
-    {
-        $event = Event::find($id);
+{
+    $event = Event::find($id);
 
-        if (!$event) {
-            return redirect()->route('dashboard.created-events')->with('error', 'Evento não encontrado.');
-        }
-
-        if ($event->picture) {
-            $imagePath = public_path('img/events/' . $event->picture);
-            if (file_exists($imagePath)) {
-                unlink($imagePath);
-            }
-        }
-
-        $event->address()->delete();
-        $event->products()->delete();
-        $event->delete();
-
-        return redirect()->route('dashboard.created-events')->with('msg', 'Evento e seus dados associados excluídos com sucesso!');
+    if (!$event) {
+        return redirect()->route('dashboard.created-events')->with('error', 'Evento não encontrado.');
     }
+
+    // Verifica se o evento possui inscritos
+    if ($event->users()->count() > 0) {
+        return redirect()->route('dashboard.created-events')->with('error', 'Este evento possui inscritos e não pode ser excluído. Entre em contato com o suporte: suporte@eventconnect.com');
+    }
+
+    if ($event->picture) {
+        $imagePath = public_path('img/events/' . $event->picture);
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+    }
+
+    $event->address()->delete();
+    $event->products()->delete();
+    $event->delete();
+
+    return redirect()->route('dashboard.created-events')->with('msg', 'Evento e seus dados associados excluídos com sucesso!');
+}
 }
