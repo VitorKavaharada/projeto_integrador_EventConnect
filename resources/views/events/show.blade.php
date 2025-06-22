@@ -83,23 +83,6 @@
         </div>
     </div>
 
-    <div class="event-participants mt-5">
-        <h3 class="mb-3">Lista de Participantes:</h3>
-        @php
-            $confirmedParticipants = $event->users->filter(function($user) use ($event) {
-                return $event->tickets()->where('user_id', $user->id)->exists();
-            });
-        @endphp
-        @if(count($confirmedParticipants) > 0)
-            <ul class="list-unstyled d-flex flex-wrap gap-3">
-                @foreach($confirmedParticipants as $participant)
-                    <li class="bg-light p-2 rounded">{{ $participant->name }}</li>
-                @endforeach
-            </ul>
-        @else
-            <p class="text-muted">Nenhum participante confirmado até agora.</p>
-        @endif
-    </div>
 </div>
 
 @endsection
