@@ -52,7 +52,7 @@
                                                 <form action="/evento/cancelar/{{ $event->id }}" method="POST">
                                                     @csrf
                                                     @method("DELETE")
-                                                    <button type="submit" class="btn btn-danger delete-btn w-100">
+                                                    <button type="submit" class="btn btn-danger delete-btn w-80 ">
                                                         <ion-icon name="trash-outline"></ion-icon> Sair do jogo
                                                     </button>
                                                 </form>

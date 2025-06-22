@@ -24,17 +24,17 @@
                 @endif
 
                 <div class="dashboard-title-container">
-                    <h1>Bem-vindo ao Dashboard</h1>
+                    <h1>Acesse suas partidas</h1>
                 </div>
 
                 <div class="dashboard-menu">
                     <a href="{{ route('dashboard.user-events') }}" class="menu-item">
-                        <h2>Meus Eventos</h2>
-                        <p>Veja seus ingressos, jogos inscritos e histórico de jogos.</p>
+                        <h2>Meus Jogos</h2>
+                        <p>Veja seus ingressos, vizualize jogos inscritos e seu o histórico</p>
                     </a>
                     <a href="{{ route('dashboard.created-events') }}" class="menu-item">
                         <h2>Jogos Criados</h2>
-                        <p>Gerencie os jogos que você criou.</p>
+                        <p>Gerencie, edite ou exclua os jogos que você criou </p>
                     </a>
                 </div>
             </div>
