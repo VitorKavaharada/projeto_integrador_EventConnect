@@ -38,7 +38,7 @@
                 {{ $eventOrganizer['name'] }}
             </p>
             @if($event->is_expired)
-                <div class="alert alert-danger event-expired-msg" role="alert">
+                <div class="alert alert-danger" role="alert">
                     Esta partida já expirou e não aceita novas inscrições.
                 </div>
             @elseif($event->participant_limit && count($event->users) >= $event->participant_limit)

@@ -15,7 +15,6 @@ use Illuminate\Support\Str;
 class PaymentController extends Controller
 {
 
-    //verificar erros de participatedEvents
     public function show($eventId)
     {
         $event = Event::findOrFail($eventId);
@@ -145,5 +144,4 @@ class PaymentController extends Controller
             return redirect()->route('payment.show', $event->id)->with('error', 'Erro ao processar o pagamento: ' . $e->getMessage());
         }
     }
-    // https://docs.stripe.com/api/payment_intents/create
 }

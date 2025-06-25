@@ -32,7 +32,7 @@
             <!-- Preço do Ingresso -->
             <div class="form-group mb-3">
                 <label for="price" class="mb-2">Preço do Ingresso (R$):</label>
-                <input type="number" step="0.01" min="0" class="form-control" id="price" name="price" placeholder="0.00" required>
+                <input type="number" step="0.01" min="0" class="form-control" id="price" name="price" placeholder="0,00 (gratuito)" required>
             </div>
 
             <!-- Número de participantes -->
@@ -83,7 +83,7 @@
             <!-- Descrição do Jogo -->
             <div class="form-group mb-3">
                 <label for="details" class="mb-2">Detalhes da Partida:</label>
-                <textarea name="details" id="details" class="form-control" placeholder="Descreva o formato ou outros detalhes importante" required></textarea>
+                <textarea name="details" id="details" class="form-control" placeholder="Descreva o formato ou outros detalhes importantes" required></textarea>
             </div>
 
             <!-- Infraestrutura local -->

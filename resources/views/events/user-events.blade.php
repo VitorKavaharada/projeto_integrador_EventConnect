@@ -18,11 +18,10 @@
 
                 @if (session('error'))
                     <div class="alert alert-danger">
-                        {!! session('error') !!} <!-- Alterado para renderizar HTML -->
+                        {!! session('error') !!} 
                     </div>
                 @endif
 
-                {{-- Resto do código permanece inalterado --}}
                 {{-- Jogos Inscritos --}}
                 <div class="col-md-10 offset-md-1 dashboard-title-container">
                     <h1>Jogos Inscritos</h1>
@@ -144,16 +143,15 @@
                     @endif
                 </div>
 
-                <!-- Pagamentos Confirmados Pendentes de Ingresso -->
+                <!-- Pagamentos Confirmados  Ingresso -->
                 @if (!empty($pendingPayments))
                     <div class="col-md-10 offset-md-1 dashboard-title-container">
-                        <h1>Pagamentos Confirmados Pendentes de Ingresso</h1>
+                        <h1>Acesse o link abaixa para gerar o seu ingresso :</h1>
                     </div>
                     <div class="col-md-10 offset-md-1 dashboard-events-container">
                         @foreach ($pendingPayments as $event)
                             <div class="alert alert-warning">
-                                <p>Pagamento confirmado para o evento "{{ $event->headline }}".</p>
-                                <a href="{{ route('ticket.manual.form', $event->id) }}" class="btn btn-primary">Gerar Ingresso</a>
+                                <a href="{{ route('ticket.manual.form', $event->id) }}" class="btn btn-primary">Ver Ingresso</a>
                             </div>
                         @endforeach
                     </div>

@@ -1,9 +1,10 @@
 <footer class="footer">
         <div class="container">
             <div class="row">
-                <!-- Sobre o Event Connect -->
+
+    
                 <div class="col-md-3 col-sm-6 mb-4">
-                    <h5 class="footer-title">Event Connect</h5>
+                    <h5 class="footer-title">EventConnect</h5>
                     <p class="footer-text">
                         O Event Connect é sua plataforma para criar e gerenciar jogos e eventos de forma prática e segura. Junte-se à nossa comunidade!
                     </p>
@@ -15,7 +16,7 @@
                     </div>
                 </div>
 
-                <!-- Links Úteis -->
+              
                 <div class="col-md-3 col-sm-6 mb-4">
                     <h5 class="footer-title">Links Úteis</h5>
                     <ul class="footer-links">
@@ -27,7 +28,7 @@
                     </ul>
                 </div>
 
-                <!-- Contato -->
+              
                 <div class="col-md-3 col-sm-6 mb-4">
                     <h5 class="footer-title">Contato</h5>
                     <ul class="footer-links">
@@ -37,7 +38,7 @@
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
+        
                 <div class="col-md-3 col-sm-6 mb-4">
                     <h5 class="footer-title">
                     <ion-icon name="notifications-outline"></ion-icon>

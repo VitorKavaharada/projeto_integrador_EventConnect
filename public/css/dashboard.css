@@ -3,10 +3,9 @@
     --color-accent: #F59E0B;
     --color-light-bg: #F9FAFB;
     --color-border: #E5E7EB;
-    --color-hover: #F3F4F6; /* cinza claro */
+    --color-hover: #F3F4F6; 
 }
 
-/* TÍTULOS CENTRALIZADOS */
 .dashboard-title-container {
     margin: auto;
     padding: 10px;
@@ -20,7 +19,7 @@
     text-align: center;
 }
 
-/* CAIXAS (meus jogos, jogos criados) */
+/* CAIXAS MEUS EVENTOS E MEUS JOGOS*/
 .dashboard-menu {
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +70,7 @@
     border-collapse: separate;
     border-spacing: 0;
     font-size: 0.95rem;
-    table-layout: auto; /* Permite que colunas se ajustem ao conteúdo */
+    table-layout: auto; 
 }
 
 .dashboard-events-container thead {
@@ -81,26 +80,25 @@
 
 .dashboard-events-container th,
 .dashboard-events-container td {
-    padding: 0.8rem; /* Padding reduzido para economizar espaço */
+    padding: 0.8rem; 
     text-align: center;
     vertical-align: middle;
-    min-width: 50px; /* Evita colunas muito estreitas */
+    min-width: 50px; 
 }
 
-/* Definir larguras específicas para colunas */
 .dashboard-events-container th:nth-child(1),
 .dashboard-events-container td:nth-child(1) {
-    width: 5%; /* Coluna "#" pequena */
+    width: 5%;
 }
 
 .dashboard-events-container th:nth-child(5),
 .dashboard-events-container td:nth-child(5) {
-    width: 10%; /* Coluna "Participantes" pequena */
+    width: 10%;
 }
 
 .dashboard-events-container th:nth-child(6),
 .dashboard-events-container td:nth-child(6) {
-    width: 25%; /* Coluna "Configurações" com espaço para botões */
+    width: 25%; 
 }
 
 .dashboard-events-container th {
@@ -189,60 +187,63 @@
 }
 
 .btn-primary {
-    background: #007bff;
+    background: #F2A340;
     color: #fff;
     border: none;
+}
+
+.btn-primary:hover{
+    background: #F2A340;
+   
 }
 
 .btn ion-icon {
     font-size: 1.2rem;
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
     .dashboard-title-container h1 {
         font-size: 1.5rem;
     }
 
     .dashboard-events-container table {
-        font-size: 0.8rem; /* Reduz tamanho da fonte */
+        font-size: 0.8rem; 
     }
 
     .dashboard-events-container th,
     .dashboard-events-container td {
-        padding: 0.5rem; /* Reduz padding */
+        padding: 0.5rem;
     }
 
     .dashboard-events-container th:nth-child(4),
     .dashboard-events-container td:nth-child(4) {
-        display: none; /* Esconde coluna "Horário" */
+        display: none; 
     }
 
     .btn {
         padding: 0.3rem 0.6rem;
-        font-size: 0.75rem; /* Botões menores */
+        font-size: 0.75rem; 
     }
 }
 
 @media (max-width: 576px) {
     .dashboard-events-container table {
-        font-size: 0.75rem; /* Fonte ainda menor */
+        font-size: 0.75rem; 
     }
 
     .dashboard-events-container th,
     .dashboard-events-container td {
-        padding: 0.4rem; /* Padding mínimo */
+        padding: 0.4rem; 
     }
 
     .dashboard-events-container th:nth-child(4),
     .dashboard-events-container td:nth-child(4) {
-        display: table-cell; /* Exibe coluna "Horário" novamente */
-        width: 15%; /* Define largura para "Horário" */
+        display: table-cell; 
+        width: 15%;
     }
-
     .btn {
         margin-top: 15px;
         padding: 0.25rem 0.5rem;
-        font-size: 0.7rem; /* Botões ainda menores */
+        font-size: 0.7rem; 
     }
 }

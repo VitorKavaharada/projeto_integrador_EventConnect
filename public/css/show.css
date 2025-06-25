@@ -56,14 +56,14 @@
     padding: 10px 20px;
     border-radius: 30px;
     font-weight: 500;
-    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    background:#133183;
     color: #fff;
     border: none;
     transition: background 0.3s ease;
 }
 
 .event-submit:hover {
-    background: linear-gradient(to right, #3B82F6, #1E3A8A);
+    background: #114ba8;
 }
 
 .event-products ul li ion-icon {
@@ -106,8 +106,9 @@
     }
 
     .event-submit {
-        width: 100%;
+        width: 60%;
         text-align: center;
+         margin-left: 10px
     }
 
     .event-products ul,
@@ -123,14 +124,22 @@
 @media (max-width: 576px) {
     #image-container img {
         max-height: 250px;
+        
     }
 
     #info-container h1 {
         font-size: 1.5rem;
     }
 
+     .event-submit {
+        width: 60%;
+        text-align: center;
+        margin-left: 100px
+    }
+
     .alert {
         font-size: 0.75rem;
         padding: 0.5rem;
+        
     }
 }

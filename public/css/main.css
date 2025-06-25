@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Fonte padrão */
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -14,7 +13,6 @@ body {
     color: #1F2937;
 }
 
-/* Header unificado com estilo do welcome.css */
 header {
     background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
@@ -23,9 +21,10 @@ header {
 }
 
 header .navbar-brand img {
-    width: 180px;
+    max-width: 110px;
+    width: 100%;
     height: auto;
-    transition: width 0.3s ease;
+    transition: max-width 0.3s ease;
 }
 
 header .navbar-nav .nav-link {
@@ -52,10 +51,9 @@ header .navbar-nav .nav-link:hover::after {
     width: 100%;
 }
 
-/* Responsividade Header */
 @media (max-width: 991.98px) {
     header .navbar-brand img {
-        width: 140px;
+        max-width: 100px;
     }
 
     header .navbar-nav {
@@ -78,11 +76,11 @@ header .navbar-nav .nav-link:hover::after {
 
 @media (max-width: 575.98px) {
     header .navbar-brand img {
-        width: 120px;
+        max-width: 90px;
     }
 }
 
-/* Navbar wrapper */
+
 #navbar {
     justify-content: space-between;
     background-color: #fff;
@@ -123,7 +121,7 @@ a,
     color: white;
 }
 
-/* Mensagens do sistema */
+/* Mensagens */
 .msg {
     background-color: #D4EDDA;
     color: #155724;

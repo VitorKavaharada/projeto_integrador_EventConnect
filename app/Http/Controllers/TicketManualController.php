@@ -13,8 +13,6 @@ use Stripe\PaymentIntent;
 class TicketManualController extends Controller
 {
 
-     //verificar erros de participatedEvents
-
     public function __construct()
     {
         Stripe::setApiKey(env('STRIPE_SECRET'));
