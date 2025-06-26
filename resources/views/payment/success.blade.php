@@ -16,7 +16,7 @@
                 @if($paymentIntent->next_action && isset($paymentIntent->next_action->boleto_display_details->pdf))
                     <p>O boleto foi gerado com sucesso!</p>
                     <p><strong>Link do Boleto:</strong> <a href="{{ $paymentIntent->next_action->boleto_display_details->pdf }}" target="_blank">Baixar Boleto</a></p>
-                    <p>Após aprovação do pagamento, a geração do ingresso no dashboard pode levar até 1 hora </p>
+                    <p>Após aprovação do pagamento, a geração do ingresso em Meus Eventos pode levar até 1 hora </p>
                     <a href="{{ route('dashboard') }}" class="btn btn-primary">Voltar ao Dashboard</a>
                 @else
                     <div id="boleto-loading">

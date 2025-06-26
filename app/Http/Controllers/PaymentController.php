@@ -15,7 +15,6 @@ use Illuminate\Support\Str;
 class PaymentController extends Controller
 {
 
-    //verificar erros de participatedEvents
     public function show($eventId)
     {
         $event = Event::findOrFail($eventId);
@@ -88,7 +87,7 @@ class PaymentController extends Controller
 
                 $user->participatedEvents()->attach($event->id);
 
-                return redirect()->route('dashboard')->with('msg', 'Pagamento aprovado! Ingresso gerado para: ' . $event->headline);
+                return redirect()->route('dashboard.user-events')->with('msg', 'Pagamento aprovado! Ingresso gerado para: ' . $event->headline);
             } elseif ($paymentMethod === 'boleto') {
                 $request->validate([
                     'street' => 'required',
@@ -145,5 +144,4 @@ class PaymentController extends Controller
             return redirect()->route('payment.show', $event->id)->with('error', 'Erro ao processar o pagamento: ' . $e->getMessage());
         }
     }
-    // https://docs.stripe.com/api/payment_intents/create
 }

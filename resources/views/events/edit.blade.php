@@ -21,7 +21,7 @@
                     src="/img/events/{{$event->picture}}" 
                     alt="{{$event->headline}}" 
                     class="img-preview"
-                    style="width: 400px; height: 200px; display: block; margin: 0 auto;">
+                    >
             </div>
 
             <!-- Nome da partida -->
