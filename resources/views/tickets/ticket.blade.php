@@ -18,14 +18,13 @@
         <h1 class="text-center">{{ $ticket->event_headline }}</h1>
         <div class="row">
             <div class="col-md-6 ticket-details">
-                <h3>Dados do Ingresso</h3>
-                <p><strong>Número:</strong> {{ $ticket->ticket_number }}</p>
-                <p><strong>Tipo:</strong> {{ ucfirst($ticket->type) }}</p>
-                <p><strong>Preço:</strong> R$ {{ number_format($ticket->price, 2, ',', '.') }}</p>
-                <h3>Dados do Usuário</h3>
-                <p><strong>Nome:</strong> {{ $ticket->user_name }}</p>
+                <p><strong>ID do Ingresso:</strong> {{ $ticket->ticket_number }}</p>
+                <p><strong>Categoria:</strong> {{ ucfirst($ticket->type) }}</p>
+                <p><strong>Valor Pago:</strong> R$ {{ number_format($ticket->price, 2, ',', '.') }}</p>
+                <h3 class="mt-4">Informações do Participante</h3>
+                <p><strong>Nome Completo:</strong> {{ $ticket->user_name }}</p>
                 <p><strong>CPF:</strong> {{ $ticket->user_cpf }}</p>
-                <h3>Dados do Evento</h3>
+                <h3 class="mt-4">Dados do Evento</h3>
                 <p><strong>Data e Horário:</strong> {{ $ticket->event_date->format('d/m/Y H:i') }}</p>
                 <p><strong>Local:</strong> {{ $ticket->event_location }}</p>
             </div>
@@ -39,7 +38,7 @@
 
     <div class="button-container">
         <button onclick="window.print()" class="btn btn-outline-secondary btn-lg">Imprimir Ingresso</button>
-        <a href="{{ route('dashboard.user-events') }}" class="btn btn-outline-primary btn-lg">Voltar ao Dashboard</a>
+        <a href="{{ route('dashboard.user-events') }}" class="btn btn-outline-primary btn-lg">Voltar aos Meus Eventos</a>
     </div>
 </div>
 
