@@ -104,7 +104,7 @@
                     <input type="text" for="outro" name="custom_product" placeholder="Digite aqui">
                 </div>
             </div>
-            <input type="submit" class="btn btn-primary" value="Criar Evento">
+            <input type="submit" class="btn btn-primary" value="Criar Partida">
         </form>
     </div>
 @endsection

@@ -26,7 +26,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
                 <div class="container-fluid px-4">
                     <a href="/" class="navbar-brand order-lg-1">
-                        <img class="logo" src="{{ asset('img/logo_sem_fundo.png') }}" alt="Logo">
+                        <img class="logo" src="{{ asset('img/EventConnect_logo.png') }}" alt="Logo">
                     </a>
                     <div class="d-flex align-items-center flex-grow-1 ms-3 search-form order-lg-2">
                         <form action="/" method="GET" class="w-100">

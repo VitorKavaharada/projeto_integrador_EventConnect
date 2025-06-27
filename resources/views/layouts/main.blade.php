@@ -26,7 +26,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
                 <div class="container-fluid px-4">
                     <a href="/" class="navbar-brand order-lg-1">
-                        <img class="logo" src="{{ asset('img/logo_sem_fundo.png') }}" alt="Logo">
+                        <img class="logo" src="{{ asset('img/EventConnect_logo.png') }}" alt="Logo">
                     </a>
                     <button class="navbar-toggler order-lg-3 order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
