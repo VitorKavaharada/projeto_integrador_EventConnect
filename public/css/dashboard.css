@@ -160,7 +160,7 @@
 
 .btn:hover {
     transform: translateY(-1px);
-    background-color: #3b82f6; /* Azul suave */
+    background-color: #3b82f6;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -176,7 +176,7 @@
 }
 
 .btn-info:hover {
-    background-color: #3b82f6 !important; /* azul suave */
+    background-color: #3b82f6 !important; 
     border-color: #3b82f6 !important;
     color: #ffffff !important;
 }

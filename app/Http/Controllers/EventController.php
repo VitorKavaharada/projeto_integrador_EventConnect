@@ -90,7 +90,7 @@ class EventController extends Controller
             }
         }
 
-        return redirect('/')->with('msg', 'Evento criado com sucesso!');
+        return redirect('/');
     }
 
     public function edit($id)
@@ -156,7 +156,6 @@ class EventController extends Controller
         return redirect()->route('dashboard.created-events')->with('error', 'Evento não encontrado.');
     }
 
-    // Verifica se o evento possui inscritos
     if ($event->users()->count() > 0) {
         return redirect()->route('dashboard.created-events')->with('error', 'Este evento possui inscritos e não pode ser excluído. Entre em contato com o suporte: suporte@eventconnect.com');
     }

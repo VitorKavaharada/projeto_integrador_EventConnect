@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-/* Fonte padrão */
+/* welcome ajustada */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F9FAFB;
     color: #1F2937;
     margin: 0;
-    padding-top: 80px; /* Compensação para o header fixo */
+    padding-top: 80px; 
 }
 
 /* Header */
@@ -23,11 +23,11 @@ header {
 }
 
 header .navbar-brand img {
-    width: 100%; /* Mantém a largura proporcional ao contêiner */
-    max-width: 13vw; /* Usa unidade relativa à largura da viewport */
-    min-width: 100px; /* Evita que o logo fique muito pequeno */
-    height: auto; /* Mantém a proporção */
-    margin-left: 2vw; /* Margem relativa para responsividade */
+    width: 100%; 
+    max-width: 13vw;
+    min-width: 100px; 
+    height: auto; 
+    margin-left: 2vw; 
     transition: max-width 0.3s ease, margin-left 0.3s ease;
 }
 
@@ -90,7 +90,7 @@ header .search-form button:hover {
 /* Responsividade do Header */
 @media (max-width: 991.98px) {
     header .navbar-brand img {
-        max-width: 20vw; /* Aumenta ligeiramente a proporção em telas médias */
+        max-width: 20vw;
         min-width: 90px;
         margin-left: 1.5vw;
     }
@@ -121,7 +121,7 @@ header .search-form button:hover {
 
 @media (max-width: 575.98px) {
     header .navbar-brand img {
-        max-width: 32vw; /* Proporção maior em telas pequenas para visibilidade */
+        max-width: 32vw; 
         min-width: 80px;
         margin-left: 0.75vw;
     }
@@ -248,17 +248,17 @@ header .search-form button:hover {
 /* Carousel */
 .carousel {
     position: relative;
-    max-height: 450px; /* Reduced from 600px */
+    max-height: 450px; 
     margin: 40px auto 20px;
     max-width: 1700px;
 }
 
 .carousel .carousel-inner {
-    max-height: 450px; /* Reduced from 600px */
+    max-height: 450px; 
 }
 
 .carousel .carousel-item img {
-    max-height: 450px; /* Reduced from 600px */
+    max-height: 450px; 
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -315,7 +315,7 @@ header .search-form button:hover {
     background-color: #F59E0B;
 }
 
-/* Carousel Caption Styling */
+/* Carousel indicador*/
 .carousel-caption {
     position: absolute;
     top: 50%;
@@ -346,13 +346,13 @@ header .search-form button:hover {
 }
 
 .carousel-caption .d-flex {
-    gap: 8px; /* Reduced gap between buttons */
+    gap: 8px; 
     justify-content: center;
 }
 
 .carousel-caption .btn {
-    padding: 7px 16px; /* Slightly smaller padding for buttons */
-    font-size: 0.9rem; /* Slightly smaller font size */
+    padding: 7px 16px; 
+    font-size: 0.9rem;
     border-radius: 5px;
     margin: auto;
 }
@@ -376,10 +376,9 @@ header .search-form button:hover {
     background-color: #fff;
 }
 
-/* Ensure carousel image covers the area */
 .carousel-item img {
     object-fit: cover;
-    height: 450px; /* Reduced from 600px */
+    height: 450px;
 }
 
 /* Ajustes de responsividade para o carrossel */
@@ -398,24 +397,24 @@ header .search-form button:hover {
     }
 
     .carousel-caption .btn {
-        padding: 6px 12px; /* Smaller padding for medium screens */
-        font-size: 0.8rem; /* Smaller font size */
+        padding: 6px 12px; 
+        font-size: 0.8rem; 
     }
 
     .carousel-caption .d-flex {
-        gap: 6px; /* Reduced gap for medium screens */
+        gap: 6px; 
     }
 
     .carousel-item img {
-        height: 350px; /* Reduced from 500px */
+        height: 350px; 
     }
 
     .carousel .carousel-inner {
-        max-height: 350px; /* Reduced from 500px */
+        max-height: 350px; 
     }
 
     .carousel {
-        max-height: 350px; /* Reduced from 500px */
+        max-height: 350px; 
     }
 }
 
@@ -435,28 +434,27 @@ header .search-form button:hover {
     }
 
     .carousel-caption .btn {
-        padding: 5px 10px; /* Even smaller padding for small screens */
-        font-size: 0.7rem; /* Even smaller font size */
+        padding: 5px 10px; 
+        font-size: 0.7rem; 
     }
 
     .carousel-caption .d-flex {
-        gap: 5px; /* Further reduced gap for small screens */
+        gap: 5px; 
     }
 
     .carousel-item img {
-        height: 300px; /* Reduced from 400px */
+        height: 300px; 
     }
 
     .carousel .carousel-inner {
-        max-height: 300px; /* Reduced from 400px */
+        max-height: 300px; 
     }
 
     .carousel {
-        max-height: 300px; /* Reduced from 400px */
+        max-height: 300px; 
     }
 }
 
-/* Adjust indicators position if needed */
 .carousel-indicators {
     bottom: 20px;
 }
