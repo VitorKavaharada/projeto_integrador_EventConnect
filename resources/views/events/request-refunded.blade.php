@@ -3,20 +3,20 @@
 @section('title', 'Solicitação de Estorno')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/request-refunded.css') }}">
 @endpush
 
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-10 offset-md-1 dashboard-container">
-                <div class="dashboard-title-container">
+            <div class="col-md-10 offset-md-1">
+                <div class="title-container">
                     <h1>Solicitação de Estorno</h1>
                 </div>
 
                 @if (session('msg'))
                     <div class="alert alert-success">
-                        {{ session('msg') }}
+                        {{ kob('msg') }}
                     </div>
                 @endif
 
@@ -27,7 +27,7 @@
                 @endif
 
                 <div class="col-md-8 offset-md-2">
-                    <p>Preencha o formulário abaixo para solicitar o estorno do ingresso para o evento <strong>{{ $event->headline }}</strong>. Após o envio, nossa equipe entrará em contato pelo e-mail <strong>suporte@eventconnect.com</strong>.</p>
+                    <p class="paragrafo">Preencha o formulário abaixo para solicitar o estorno do ingresso para o evento <strong>{{ $event->headline }}</strong>. Após o envio, nossa equipe entrará em contato pelo e-mail <strong>suporte@eventconnect.com</strong>.</p>
 
                     <form action="{{ route('refund.submit', $event->id) }}" method="POST">
                         @csrf
@@ -43,8 +43,8 @@
                             <label for="reason">Motivo da Solicitação</label>
                             <textarea class="form-control" id="reason" name="reason" rows="5" required placeholder="Descreva o motivo da solicitação de estorno"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Solicitação</button>
-                        <a href="{{ route('dashboard.user-events') }}" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-primary-request">Enviar Solicitação</button>
+                        <a href="{{ route('dashboard.user-events') }}" class="btn btn-secondary-request">Cancelar</a>
                     </form>
                 </div>
             </div>

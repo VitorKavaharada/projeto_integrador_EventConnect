@@ -112,7 +112,7 @@
                 </div>
             </div>
 
-            <input type="submit" class="btn btn-primary" value="Editar Evento">
+            <input type="submit" class="btn btn-primary" value="Editar Partida ">
         </form>
     </div>
 @endsection

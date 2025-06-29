@@ -6,4 +6,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// https://apitemplate.io/blog/how-to-create-a-dynamic-qr-code-for-a-pdf/(resolver problema de renderização do DOM(V))

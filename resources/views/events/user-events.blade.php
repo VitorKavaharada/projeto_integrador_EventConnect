@@ -69,7 +69,7 @@
 
                 <!-- Histórico de Eventos -->
                 <div class="col-md-10 offset-md-1 dashboard-title-container">
-                    <h1>Histórico de Eventos</h1>
+                    <h1>Histórico de Partidas</h1>
                 </div>
                 <div class="col-md-10 offset-md-1 dashboard-events-container">
                     @if(is_countable($historicalEvents) && count($historicalEvents) > 0)

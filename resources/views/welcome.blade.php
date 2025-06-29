@@ -26,7 +26,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
                 <div class="container-fluid px-4">
                     <a href="/" class="navbar-brand order-lg-1">
-                        <img class="logo" src="{{ asset('img/logo_sem_fundo.png') }}" alt="Logo">
+                        <img class="logo" src="{{ asset('img/EventConnect_logo.png') }}" alt="Logo">
                     </a>
                     <div class="d-flex align-items-center flex-grow-1 ms-3 search-form order-lg-2">
                         <form action="/" method="GET" class="w-100">
@@ -80,38 +80,49 @@
                         <p class="msg">{{ session('msg') }}</p>
                     @endif
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-   
+                        <!-- Slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ asset('img/carousel/estadio.jpeg') }}" class="d-block w-100" alt="Slide 1">
+                                <div class="carousel-caption">
+                                    <h1 class="display-3 text-white">Organize Seu Campeonato com Facilidade</h1>
+                                    <p class="lead text-gray">Transforme a várzea com tecnologia — crie partidas, controle placares e gerencie equipes de forma simples e eficiente.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('img/carousel/image.png') }}" class="d-block w-100" alt="Slide 2">
+                                <div class="carousel-caption">
+                                    <h1 class="display-4 text-white">Seu Jogo, Seu Controle</h1>
+                                    <p class="lead text-gray">Do agendamento ao apito final, leve a organização dos campeonatos amadores para o próximo nível</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ asset('img/carousel/estadio_2.png') }}" class="d-block w-100" alt="Slide 3">
+                                <div class="carousel-caption">
+                                    <h1 class="display-4 text-white">Futebol de Várzea, Agora Digital</h1>
+                                    <p class="lead text-gray" >Marque jogos, acompanhe resultados e conecte sua comunidade com a plataforma</p>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Slides -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="{{ asset('img/carousel/jogopes_hd.jpeg') }}" class="d-block w-100" alt="Slide 1">
-        </div>
-        <div class="carousel-item">
-            <img src="{{ asset('img/carousel/estadio.jpeg') }}" class="d-block w-100" alt="Slide 2">
-        </div>
-        <div class="carousel-item">
-            <img src="{{ asset('img/carousel/estadio_2.png') }}" class="d-block w-100" alt="Slide 3">
-        </div>
-    </div>
+                        <!-- Setas -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon custom-carousel-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon custom-carousel-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
 
-    <!-- Setas -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon custom-carousel-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon custom-carousel-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Próximo</span>
-    </button>
-
-     <!-- Indicadores -->
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-</div>
+                        <!-- Indicadores -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
 
                     <div id="events-container" class="col-md-12">
                         @if($research)
@@ -133,7 +144,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             @endforeach
                             @if(count($events) == 0 && $research)
                                 <p>Não foi possível encontrar nenhuma partida com "{{$research}}" <a href="/">Ver todos</a></p>
