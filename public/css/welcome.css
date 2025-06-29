@@ -83,7 +83,7 @@ header .search-form button {
 }
 
 header .search-form button:hover {
-    background-color: #e49e48;;
+    background-color: #e49e48;
     color: #fff;
 }
 
@@ -123,7 +123,7 @@ header .search-form button:hover {
     header .navbar-brand img {
         max-width: 32vw; /* Proporção maior em telas pequenas para visibilidade */
         min-width: 80px;
-        margin-left: 0,75vw;
+        margin-left: 0.75vw;
     }
 
     header .search-form input {
@@ -199,7 +199,8 @@ header .search-form button:hover {
 
 .card .btn-primary {
     background: #4367cc;
-    border: none;
+    border:
+    none;
     border-radius: 30px;
     font-weight: 500;
     color: #fff;
@@ -247,17 +248,17 @@ header .search-form button:hover {
 /* Carousel */
 .carousel {
     position: relative;
-    max-height: 600px;
+    max-height: 450px; /* Reduced from 600px */
     margin: 40px auto 20px;
     max-width: 1700px;
 }
 
 .carousel .carousel-inner {
-    max-height: 400px;
+    max-height: 450px; /* Reduced from 600px */
 }
 
 .carousel .carousel-item img {
-    max-height: 400px;
+    max-height: 450px; /* Reduced from 600px */
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -295,7 +296,6 @@ header .search-form button:hover {
     position: static;
     display: flex;
     justify-content: center;
-    gap: 8px;
     padding: 0;
     margin-top: 15px;
 }
@@ -313,4 +313,150 @@ header .search-form button:hover {
 .carousel-indicators .active {
     opacity: 1;
     background-color: #F59E0B;
+}
+
+/* Carousel Caption Styling */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #D1D5DB;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 1000px;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff87;
+    line-height: 1.2;
+}
+
+.carousel-caption p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+}
+
+.carousel-caption .d-flex {
+    gap: 8px; /* Reduced gap between buttons */
+    justify-content: center;
+}
+
+.carousel-caption .btn {
+    padding: 7px 16px; /* Slightly smaller padding for buttons */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    border-radius: 5px;
+    margin: auto;
+}
+
+.carousel-caption .btn-primary {
+    background-color: #f97316;
+    border: none;
+}
+
+.carousel-caption .btn-primary:hover {
+    background-color: #ea580c;
+}
+
+.carousel-caption .btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+}
+
+.carousel-caption .btn-outline-light:hover {
+    color: #f97316;
+    background-color: #fff;
+}
+
+/* Ensure carousel image covers the area */
+.carousel-item img {
+    object-fit: cover;
+    height: 450px; /* Reduced from 600px */
+}
+
+/* Ajustes de responsividade para o carrossel */
+@media (max-width: 991.98px) {
+    .carousel-caption {
+        width: 95%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+        max-width: 550px;
+    }
+
+    .carousel-caption .btn {
+        padding: 6px 12px; /* Smaller padding for medium screens */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .carousel-caption .d-flex {
+        gap: 6px; /* Reduced gap for medium screens */
+    }
+
+    .carousel-item img {
+        height: 350px; /* Reduced from 500px */
+    }
+
+    .carousel .carousel-inner {
+        max-height: 350px; /* Reduced from 500px */
+    }
+
+    .carousel {
+        max-height: 350px; /* Reduced from 500px */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-caption {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.85rem;
+        max-width: 100%;
+    }
+
+    .carousel-caption .btn {
+        padding: 5px 10px; /* Even smaller padding for small screens */
+        font-size: 0.7rem; /* Even smaller font size */
+    }
+
+    .carousel-caption .d-flex {
+        gap: 5px; /* Further reduced gap for small screens */
+    }
+
+    .carousel-item img {
+        height: 300px; /* Reduced from 400px */
+    }
+
+    .carousel .carousel-inner {
+        max-height: 300px; /* Reduced from 400px */
+    }
+
+    .carousel {
+        max-height: 300px; /* Reduced from 400px */
+    }
+}
+
+/* Adjust indicators position if needed */
+.carousel-indicators {
+    bottom: 20px;
 }
