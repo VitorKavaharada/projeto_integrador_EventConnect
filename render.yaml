@@ -1,0 +1,92 @@
+# render.yaml
+databases:
+  - name: your-database-name  # Opcional, se você usar um banco local no Render
+    databaseName: your_db
+    user: your_user
+    password: your_password
+
+services:
+  - type: web
+    name: eventconnect-fatec  # Nome da sua aplicação no Render
+    env: php
+    build:
+      environment:
+        - PHP_VERSION=8.2
+      steps:
+        - run: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+        - run: composer install --no-dev
+        - run: php artisan migrate --force
+    startCommand: "php artisan serve --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: APP_NAME
+        value: EventConnect
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:eAMSvf6CcG5wEMpYRbmH6yUZNx/phHe+3L+GrwBilIg=
+      - key: APP_DEBUG
+        value: false
+      - key: APP_TIMEZONE
+        value: UTC
+      - key: APP_URL
+        value: https://eventconnect-fatec.azurewebsites.net
+      - key: APP_LOCALE
+        value: pt_BR
+      - key: APP_FALLBACK_LOCALE
+        value: pt_BR
+      - key: APP_FAKER_LOCALE
+        value: pt_BR
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: eventosoketc.mysql.dbaas.com.br
+      - key: DB_PORT
+        value: 3306
+      - key: DB_DATABASE
+        value: eventosoketc
+      - key: DB_USERNAME
+        value: eventosoketc
+      - key: DB_PASSWORD
+        value: Sk4PFq9jUwt1V#
+      - key: SESSION_DRIVER
+        value: database
+      - key: SESSION_LIFETIME
+        value: 120
+      - key: SESSION_ENCRYPT
+        value: false
+      - key: SESSION_PATH
+        value: /
+      - key: SESSION_DOMAIN
+        value: null
+      - key: BROADCAST_CONNECTION
+        value: log
+      - key: FILESYSTEM_DISK
+        value: local
+      - key: QUEUE_CONNECTION
+        value: database
+      - key: CACHE_STORE
+        value: database
+      - key: CACHE_PREFIX
+        value: ""
+      - key: MAIL_MAILER
+        value: log
+      - key: MAIL_HOST
+        value: 127.0.0.1
+      - key: MAIL_PORT
+        value: 2525
+      - key: MAIL_USERNAME
+        value: null
+      - key: MAIL_PASSWORD
+        value: null
+      - key: MAIL_FROM_ADDRESS
+        value: "hello@example.com"
+      - key: MAIL_FROM_NAME
+        value: EventConnect
+      - key: STRIPE_KEY
+        value: pk_test_51ROIzY4PJkWAW47fl9ayyv2GZ6SAi3Lin9tgrD1lZwSDsTki8JgwjIfF1w0b7fQo9KFjUnOKvfpl8YXW4yk6hr1b00XEbz0eKV
+      - key: STRIPE_SECRET
+        value: sk_test_51ROIzY4PJkWAW47fzBkIvvnPuuYv0f2cCKIGTqqYCjkBYgKlvEv3e84Sq9xlq6b0KN5ZdU2qT5LHyHLh0jMDlojJ00AUBmeDYv
+      - key: CASHIER_CURRENCY
+        value: BRL
+      - key: VITE_APP_NAME
+        value: EventConnect
