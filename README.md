@@ -60,7 +60,7 @@ Repositório destinado à colaboração em equipe para gerenciar eventos esporti
 
 ---
 
-## ⚙️ Instalação
+## Instalação
 
 1. **Instale as dependências do PHP:**
    ```bash
