@@ -51,10 +51,10 @@ Repositório destinado à colaboração em equipe para gerenciar eventos esporti
 
 ## Pré-requisitos
 
-- PHP 8.2.12 ou superior  
+- PHP 8.2.12   
 - Composer  
-- Node.js 16.x ou superior  
-- MySQL 10.4.32-MariaDB ou compatível  
+- Node.js 16.x   
+- MySQL 10.4.32-MariaDB 
 - Conta Stripe (ambiente SandBox)  
 - Git  
 
